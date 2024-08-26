@@ -21,8 +21,8 @@
      (data-bits *default-data-bits*)
      (stop-bits *default-stop-bits*)
      (parity *default-parity*)
-     ;; below are not yet supported
      cts-flow-p
+     ;; below are not yet supported
      dsr-flow-p
      dtr
      rts

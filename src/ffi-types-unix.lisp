@@ -65,6 +65,7 @@
 (constant (PARODD "PARODD"))
 (constant (HUPCL "HUPCL"))
 (constant (CLOCAL "CLOCAL"))
+(constant (CRTSCTS "CRTSCTS"))
 
 (constant (CS5 "CS5"))
 (constant (CS6 "CS6"))

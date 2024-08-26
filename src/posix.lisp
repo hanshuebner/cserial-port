@@ -133,7 +133,8 @@ deci-seconds.")))
 
 (defmethod %open ((s posix-serial)
 		  &key
-		    name)
+		    name
+                    cts-flow-p)
   (let* ((ratedef (%baud-rate s))
 	 (fd (open name (logior o-rdwr o-noctty))))
     (when (= -1 fd)
@@ -154,6 +155,7 @@ deci-seconds.")))
 			    (%data-bits s)
 			    (%parity s)
                             (%stop-bits s)
+                            (if cts-flow-p CRTSCTS 0)
 			    HUPCL CLOCAL))
 	(setf oflag (off oflag OPOST))
 	(setf (mem-aref cc 'cc-t VTIME) 0)

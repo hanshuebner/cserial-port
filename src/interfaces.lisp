@@ -21,7 +21,10 @@
 	     :documentation "Number of stop-bits")
    (parity :initarg :parity
 	   :accessor serial-parity
-	   :documentation "Parity checking."))
+	   :documentation "Parity checking.")
+   (cts-flow-p :initarg :cts-flow-p
+               :accessor serial-cts-flow-p
+               :documentation "Enable RTS/CTS hardware flow control."))
   (:documentation ""))
 
 (defvar *serial-class* 'serial)
